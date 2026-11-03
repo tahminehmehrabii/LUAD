@@ -1,11 +1,10 @@
-# Integrated LUAD Analysis
+# Integrated Transcriptomic Analysis of Lung Adenocarcinoma
 
-R workflow template for lung adenocarcinoma (LUAD), combining bulk RNA-seq, single-cell RNA-seq, and Visium spatial transcriptomics.
+## 1. Bulk RNA-seq
+Identify survival-associated glycolysis genes, build a LASSO–Cox model, and evaluate it in an independent dataset.
 
-## Features
-- LASSO-Cox survival modeling and external validation.
-- Single-cell clustering and GPR87 expression analysis.
-- Spatial associations of GPR87 with glycolysis and immune signatures.
+## 2. Single-Cell RNA-seq
+Perform quality control, normalization, and clustering using Seurat; import reviewed cell annotations and examine GPR87 expression.
 
-## Requirements
-R with Seurat v5, glmnet, survival, survminer, ggplot2, Matrix, and GSVA.
+## 3. Spatial Transcriptomics
+Map GPR87 expression onto Visium H&E images and compare its associations with glycolysis and immune signatures using ssGSEA and Spearman correlation.
