@@ -1,7 +1,4 @@
-# Integrated LUAD analysis: bulk, LASSO-Cox, scRNA-seq and Visium
-# Configurable template; not the original code of a completed study.
-# Requires user data, reviewed annotations and prespecified signatures.
-# No nine-gene result or stronger glycolysis association is forced.
+
 set.seed(2026)
 
 # Install dependencies separately:
@@ -324,11 +321,4 @@ saveRDS(cfg,out('analysis_configuration.rds'))
 capture.output(sessionInfo(),file=out('sessionInfo.txt'))
 message('Completed. Outputs: ',normalizePath(cfg$output))
 
-# LIMITATIONS
-# Training metrics are apparent performance, not unbiased validation.
-# Ensure independent patients and comparable bulk preprocessing.
-# Review doublets, batch effects, annotations and malignancy evidence.
-# Visium spots contain mixed cells; correlations are exploratory and
-# unadjusted for tumor content/confounders. Patient summaries use equal
-# section weighting in Fisher-z space; compare correlations directly.
-# No supplied datasets were used to execute this template.
+
